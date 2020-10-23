@@ -1,2 +1,3 @@
 #Competative programming using Python3
-![cp](/home/shazib/Desktop/cp/coding.gif)
+<br>
+![cp](https://github.com/shazx06/cp/blob/main/coding.gif)
