@@ -1,3 +1,2 @@
-#Competative programming using Python3
+## Competative programming using Python3 Mostly of Leetcode
 <br>
-![cp](https://github.com/shazx06/cp/blob/main/coding.gif)
