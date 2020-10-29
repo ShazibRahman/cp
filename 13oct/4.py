@@ -1,17 +1,16 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
 class Solution:
-    def deleteDuplicates(self, head: ListNode) -> ListNode:
-        cur=head
-        if cur is None :
-            return cur
+    def dailyTemperatures(self, temp: List[int]) -> List[int]:
+          le=len(temp)
 
-        while cur.next :
-            if cur.val==cur.next.val:
-                cur.next=cur.next.next
-            else :
-                cur=cur.next
-        return  head
+          res=[0]*le
+          stack=[le-1]
+
+          for i in range(le-2, -1, -1):
+              while stack and temp[stack[-1]]<=temp[i]:
+                stack.pop()
+              if stack:
+                 res[i]=stack[-1]-i
+              stack.append(i)
+
+
+          return res

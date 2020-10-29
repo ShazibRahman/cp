@@ -28,6 +28,31 @@ class Solution:
 
 3. [remove duplicates from sorted list ii](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)
 
+>  1st method (my Solution)
+
+```python
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def deleteDuplicates(self, head: ListNode) -> ListNode:
+        cur=head
+        if cur is None :
+            return cur
+
+        while cur.next :
+            if cur.val==cur.next.val:
+                cur.next=cur.next.next
+            else :
+                cur=cur.next
+        return  head
+
+```
+>2nd method
+
 ```python
 # Definition for singly-linked list.
 # class ListNode:
@@ -61,30 +86,8 @@ class Solution:
 
 4. [remove duplicates from sorted list](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)
 
->  1st method
 
-```python
 
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-class Solution:
-    def deleteDuplicates(self, head: ListNode) -> ListNode:
-        cur=head
-        if cur is None :
-            return cur
-
-        while cur.next :
-            if cur.val==cur.next.val:
-                cur.next=cur.next.next
-            else :
-                cur=cur.next
-        return  head
-
-```
- > 2nd method
 
 
 ```python
