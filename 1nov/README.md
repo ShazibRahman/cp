@@ -34,14 +34,14 @@ for i in range(n):
 
 ### Largest-rectangle
 
-> * Maintain a stack 
+> * Maintain a stack
 > * If stack is empty or value at index of stack is less than or equal to value at current  index, push this into stack.
 > * Otherwise keep removing values from stack till value at index at top of stack is  less than value at current index.
 > * While removing value from stack calculate area
-> * if stack is empty 
+> * if stack is empty
 > * it means that till this point value just removed has to be smallest element
 > * so area = input[top] * i
-> * if stack is not empty then this value at index top is less than or equal to 
+> * if stack is not empty then this value at index top is less than or equal to
 > * everything from stack top + 1 till i. So area will
 > * area = input[top] * (i - stack.peek() - 1);
 > * Finally maxArea is area if area is greater than maxArea.
@@ -84,3 +84,35 @@ def largestRectangle(h):
 ```
 
 3. [poisonous plants](https://www.hackerrank.com/challenges/poisonous-plants/problem)
+
+### Poisonous Plants
+
+> * Maintain a Stack
+> * Intially the alive days for every plants will be one
+> * If stack is empty push the days of plant and plant index to the stack.
+> * else if the stack is not empty , it will check all the plants in the stack [all left to it ]
+> * pop the element in the stack if it has more pesticides than the current plant and increase the Alive day till we either reach end of the stack or the plants having less pesticides
+> * check if the Alive day of this plant is maximum if not continue else update the value and append this plant and its alive days to Stack
+
+
+```python
+def poisonousPlants(plants):
+    stack = []
+    maxDays = -math.inf
+
+    for plant in plants:
+        days = 1
+
+        while stack and stack[-1][0] >= plant:
+            _, d = stack.pop()
+            days = max(days, d + 1)
+
+        if not stack:
+            days = 0
+
+        maxDays = max(maxDays, days)
+        stack.append((plant, days))
+
+    return maxDays
+
+```
