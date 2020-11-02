@@ -31,7 +31,7 @@ for i in range(n):
 ```
 
 
-### [2.  Largest-rectangle]((https://www.hackerrank.com/challenges/largest-rectangle/problem))
+### [2.  Largest-rectangle](https://www.hackerrank.com/challenges/largest-rectangle/problem)
 
 > * Maintain a stack
 > * If stack is empty or value at index of stack is less than or equal to value at current  index, push this into stack.
@@ -83,7 +83,7 @@ def largestRectangle(h):
 ```
 
 
-###  [3. Poisonous Plants]((https://www.hackerrank.com/challenges/poisonous-plants/problem))
+###  [3. Poisonous Plants](https://www.hackerrank.com/challenges/poisonous-plants/problem)
 
 
 
