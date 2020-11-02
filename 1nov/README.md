@@ -6,7 +6,7 @@
 ### A simple text editor
 
 in order to solve the question we need two things first the current strings and second one a stack for saving the previous strings
-> we must use a stack to save the past strings we can't acheive this by just using a string var for storing past string becuaase it stores just one past string but need all for undo functios
+> we must use a stack to save the past strings we can't acheive this by just using a string var  becuaase it stores just one past strings but need all the past strings for multiple  undo functions
 
 ```python
 n=int(input())
@@ -31,5 +31,56 @@ for i in range(n):
 ```
 
 2. [Largest rectangle problem](https://www.hackerrank.com/challenges/largest-rectangle/problem)
+
+### Largest-rectangle
+
+> * Maintain a stack 
+> * If stack is empty or value at index of stack is less than or equal to value at current  index, push this into stack.
+> * Otherwise keep removing values from stack till value at index at top of stack is  less than value at current index.
+> * While removing value from stack calculate area
+> * if stack is empty 
+> * it means that till this point value just removed has to be smallest element
+> * so area = input[top] * i
+> * if stack is not empty then this value at index top is less than or equal to 
+> * everything from stack top + 1 till i. So area will
+> * area = input[top] * (i - stack.peek() - 1);
+> * Finally maxArea is area if area is greater than maxArea.
+
+```python
+def largestRectangle(h):
+    st=[]
+    area=0
+    i=0
+    max_area=0
+
+
+    while i < len(h):
+        if not st or h[st[-1]] < h[i]:
+            st.append(i)
+            i+=1
+
+
+        else:
+            top=st.pop()
+
+            if not st:
+                area=h[top]*i
+
+            else:
+                area= h[top]*(i-st[-1]-1)
+        if area > max_area:
+            max_area=area
+
+
+    while st :
+        top=st.pop()
+        if not st:
+            area= h[top]*i
+        else:
+            area=h[top] * (i-st[-1]-1)
+        if area > max_area:
+            max_area=area
+    return max_area
+```
 
 3. [poisonous plants](https://www.hackerrank.com/challenges/poisonous-plants/problem)
