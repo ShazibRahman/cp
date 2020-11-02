@@ -1,7 +1,7 @@
 # 1 November (Hackerrank) [14th Day]
 ## based on stacks
 
-
+---
 
 ### [1. A simple text editor](https://www.hackerrank.com/challenges/simple-text-editor/problem)
 
@@ -29,6 +29,8 @@ for i in range(n):
     else:
         string =st.pop()
 ```
+
+---
 
 
 ### [2.  Largest-rectangle](https://www.hackerrank.com/challenges/largest-rectangle/problem)
@@ -81,7 +83,7 @@ def largestRectangle(h):
             max_area=area
     return max_area
 ```
-
+---
 
 ###  [3. Poisonous Plants](https://www.hackerrank.com/challenges/poisonous-plants/problem)
 
