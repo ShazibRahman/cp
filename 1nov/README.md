@@ -1,9 +1,9 @@
 # 1 November (Hackerrank) [14th Day]
 ## based on stacks
 
-1. [simple text editor](https://www.hackerrank.com/challenges/simple-text-editor/problem)
 
-### A simple text editor
+
+### [1. A simple text editor](https://www.hackerrank.com/challenges/simple-text-editor/problem)
 
 in order to solve the question we need two things first the current strings and second one a stack for saving the previous strings
 > we must use a stack to save the past strings we can't acheive this by just using a string var  becuaase it stores just one past strings but need all the past strings for multiple  undo functions
@@ -30,9 +30,8 @@ for i in range(n):
         string =st.pop()
 ```
 
-2. [Largest rectangle problem](https://www.hackerrank.com/challenges/largest-rectangle/problem)
 
-### Largest-rectangle
+### [2.  Largest-rectangle]((https://www.hackerrank.com/challenges/largest-rectangle/problem))
 
 > * Maintain a stack
 > * If stack is empty or value at index of stack is less than or equal to value at current  index, push this into stack.
@@ -83,9 +82,10 @@ def largestRectangle(h):
     return max_area
 ```
 
-3. [poisonous plants](https://www.hackerrank.com/challenges/poisonous-plants/problem)
 
-### Poisonous Plants
+###  [3. Poisonous Plants]((https://www.hackerrank.com/challenges/poisonous-plants/problem))
+
+
 
 > * Maintain a Stack
 > * Intially the alive days for every plants will be one
