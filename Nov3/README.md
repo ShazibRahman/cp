@@ -36,3 +36,38 @@ class Solution:
 
 
 ## 2. [Longest Mountains in an Array](https://leetcode.com/problems/longest-mountain-in-array/)
+
+> * Filtering out the peaks.
+> * checking the left side using a while loop if it satisfies up until it doesn't and point at using a pointer variable. We do that two variables away from the peak at a time from the left then we move the pointer one step to the left.
+> * checking the right side using a while loop if it satisfies up until it doesn't and point at using a pointer. variable. We do that two variables at a time from the right we move the pointer one step to the right.
+> * Now that you have two pointers, one on the left and one on the right. subtract them out to see the actual value. and then take out one, [ peak ].
+> * Compare it to the current maximum longest peak. and choose the higher one.
+> *  Move the pointer all the way to the right pointer of the last while loop. WHY?, because you already explored the variables before that. so it does not make sense to explore these values again.
+> * Then return the answer
+
+```python
+class Solution:
+    def longestMountain(self, a: List[int]) -> int:
+        longestpeak=0
+        i=1
+        while i < len(a)-1:
+            if a[i]>a[i-1] and a[i]> a[i+1]:
+                pass
+            else:
+                i+=1
+                continue
+            left=i-2
+            while left >= 0 and a[left] < a[left+1]:
+                left-=1
+
+            right=i+2
+
+            while right< len(a) and a[right-1] > a[right]:
+                right+=1
+            peak=right -left -1
+
+            longestpeak=max(longestpeak,peak)
+            i=right
+        return longestpeak
+
+```
