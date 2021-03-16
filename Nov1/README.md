@@ -6,7 +6,7 @@
 ### [1. A simple text editor](https://www.hackerrank.com/challenges/simple-text-editor/problem)
 
 in order to solve the question we need two things first the current strings and second one a stack for saving the previous strings
-> we must use a stack to save the past strings we can't acheive this by just using a string var  becuaase it stores just one past strings but need all the past strings for multiple  undo functions
+> we must use a stack to save the past strings we can't acheive this by just using a string var  because it stores just one past strings but need all the past strings for multiple  undo functions
 
 ```python
 n=int(input())
