@@ -1,3 +1,3 @@
 ## Competative programming using Python3 Mostly of Leetcode
 <br>
-![code](./coding.gif)
+<img title="a title" alt="Alt text" src="./coding.gif">
